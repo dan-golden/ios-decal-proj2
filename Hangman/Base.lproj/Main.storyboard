@@ -53,6 +53,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-3G-rLB">
+                                <rect key="frame" x="200" y="60" width="200" height="200"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" hint="" label="Hangman State">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RhI-3G-rLB" secondAttribute="height" multiplier="1:1" id="VAi-JR-sPc"/>
+                                    <constraint firstAttribute="width" constant="200" id="hMu-rF-rFc"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN7-ME-obJ">
                                 <rect key="frame" x="180" y="406" width="240" height="98"/>
                                 <animations/>
@@ -64,14 +75,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-3G-rLB">
-                                <rect key="frame" x="200" y="60" width="200" height="200"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="RhI-3G-rLB" secondAttribute="height" multiplier="1:1" id="VAi-JR-sPc"/>
-                                    <constraint firstAttribute="width" constant="200" id="hMu-rF-rFc"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

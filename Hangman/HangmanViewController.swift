@@ -23,6 +23,7 @@ class HangmanViewController: UIViewController {
         game.start()
         hangmanState.image = UIImage(named: "hangman1")
         wordLabel.text = game.knownString
+        hangmanState.accessibilityHint = "0 incorrect guesses"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -39,6 +40,7 @@ class HangmanViewController: UIViewController {
         wordLabel.text = game.knownString
         game.incorrectGuesses = 0
         guessesLabel.text = ""
+        hangmanState.accessibilityHint = "0 incorrect guesses"
     }
     
     func displayAlert(title: String, message: String) {
@@ -66,9 +68,11 @@ class HangmanViewController: UIViewController {
         } else {
             guessesLabel.text = game.guesses()
             var imageTitle = "hangman" + (game.incorrectGuesses+1).description
+            hangmanState.accessibilityHint = game.incorrectGuesses.description + " incorrect guesses"
             if game.incorrectGuesses >= 6 {
                 displayAlert("Game Over", message: "You've reached the maximum number of guesses. Please press New Game")
                 imageTitle = "hangman7"
+                hangmanState.accessibilityHint = "6 incorrect guesses"
             }
             hangmanState.image = UIImage(named: imageTitle)
         }
